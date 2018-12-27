@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		7E25BA1821D107F900EB2EC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25BA1721D107F900EB2EC7 /* AppDelegate.swift */; };
-		7E25BA1A21D107F900EB2EC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25BA1921D107F900EB2EC7 /* ViewController.swift */; };
+		7E25BA1A21D107F900EB2EC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25BA1921D107F900EB2EC7 /* HomeViewController.swift */; };
 		7E25BA1D21D107F900EB2EC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E25BA1B21D107F900EB2EC7 /* Main.storyboard */; };
-		7E25BA2021D107F900EB2EC7 /* TwitterSlideOutMenu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E25BA1E21D107F900EB2EC7 /* TwitterSlideOutMenu.xcdatamodeld */; };
 		7E25BA2221D107FB00EB2EC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E25BA2121D107FB00EB2EC7 /* Assets.xcassets */; };
 		7E25BA2521D107FB00EB2EC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E25BA2321D107FB00EB2EC7 /* LaunchScreen.storyboard */; };
+		7E25BA2D21D1218B00EB2EC7 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25BA2C21D1218B00EB2EC7 /* MenuTableViewController.swift */; };
+		7E657B6C21D38C30007D46B9 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E657B6B21D38C30007D46B9 /* MenuItem.swift */; };
+		7E657B6E21D38DA9007D46B9 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E657B6D21D38DA9007D46B9 /* MenuItemCell.swift */; };
+		7E657B7121D3A6B6007D46B9 /* TrendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E657B7021D3A6B6007D46B9 /* TrendingController.swift */; };
+		7E657B7321D3AC4B007D46B9 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E657B7221D3AC4B007D46B9 /* VideosTableViewController.swift */; };
+		7EFA460721D25DF600017BAE /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA460621D25DF600017BAE /* ContainerVC.swift */; };
+		7EFA460C21D2811000017BAE /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA460B21D2811000017BAE /* CustomHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E25BA1421D107F900EB2EC7 /* TwitterSlideOutMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterSlideOutMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E25BA1721D107F900EB2EC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E25BA1921D107F900EB2EC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E25BA1921D107F900EB2EC7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7E25BA1C21D107F900EB2EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7E25BA1F21D107F900EB2EC7 /* TwitterSlideOutMenu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TwitterSlideOutMenu.xcdatamodel; sourceTree = "<group>"; };
 		7E25BA2121D107FB00EB2EC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E25BA2421D107FB00EB2EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E25BA2621D107FB00EB2EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E25BA2C21D1218B00EB2EC7 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		7E657B6B21D38C30007D46B9 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		7E657B6D21D38DA9007D46B9 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		7E657B7021D3A6B6007D46B9 /* TrendingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingController.swift; sourceTree = "<group>"; };
+		7E657B7221D3AC4B007D46B9 /* VideosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewController.swift; sourceTree = "<group>"; };
+		7EFA460621D25DF600017BAE /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		7EFA460B21D2811000017BAE /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,53 @@
 		7E25BA1621D107F900EB2EC7 /* TwitterSlideOutMenu */ = {
 			isa = PBXGroup;
 			children = (
+				7E657B6F21D3A6A2007D46B9 /* Controllers */,
+				7E657B6A21D38C25007D46B9 /* Model */,
+				7EFA460A21D2810100017BAE /* Views */,
+				7EFA460521D25DE400017BAE /* BaseGroup */,
 				7E25BA1721D107F900EB2EC7 /* AppDelegate.swift */,
-				7E25BA1921D107F900EB2EC7 /* ViewController.swift */,
+				7E25BA1921D107F900EB2EC7 /* HomeViewController.swift */,
 				7E25BA1B21D107F900EB2EC7 /* Main.storyboard */,
 				7E25BA2121D107FB00EB2EC7 /* Assets.xcassets */,
 				7E25BA2321D107FB00EB2EC7 /* LaunchScreen.storyboard */,
 				7E25BA2621D107FB00EB2EC7 /* Info.plist */,
-				7E25BA1E21D107F900EB2EC7 /* TwitterSlideOutMenu.xcdatamodeld */,
+				7E25BA2C21D1218B00EB2EC7 /* MenuTableViewController.swift */,
 			);
 			path = TwitterSlideOutMenu;
+			sourceTree = "<group>";
+		};
+		7E657B6A21D38C25007D46B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E657B6B21D38C30007D46B9 /* MenuItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E657B6F21D3A6A2007D46B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E657B7021D3A6B6007D46B9 /* TrendingController.swift */,
+				7E657B7221D3AC4B007D46B9 /* VideosTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7EFA460521D25DE400017BAE /* BaseGroup */ = {
+			isa = PBXGroup;
+			children = (
+				7EFA460621D25DF600017BAE /* ContainerVC.swift */,
+			);
+			path = BaseGroup;
+			sourceTree = "<group>";
+		};
+		7EFA460A21D2810100017BAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EFA460B21D2811000017BAE /* CustomHeaderView.swift */,
+				7E657B6D21D38DA9007D46B9 /* MenuItemCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E25BA2021D107F900EB2EC7 /* TwitterSlideOutMenu.xcdatamodeld in Sources */,
-				7E25BA1A21D107F900EB2EC7 /* ViewController.swift in Sources */,
+				7E657B7121D3A6B6007D46B9 /* TrendingController.swift in Sources */,
+				7EFA460C21D2811000017BAE /* CustomHeaderView.swift in Sources */,
+				7E25BA2D21D1218B00EB2EC7 /* MenuTableViewController.swift in Sources */,
+				7E657B7321D3AC4B007D46B9 /* VideosTableViewController.swift in Sources */,
+				7E25BA1A21D107F900EB2EC7 /* HomeViewController.swift in Sources */,
+				7E657B6C21D38C30007D46B9 /* MenuItem.swift in Sources */,
+				7E657B6E21D38DA9007D46B9 /* MenuItemCell.swift in Sources */,
 				7E25BA1821D107F900EB2EC7 /* AppDelegate.swift in Sources */,
+				7EFA460721D25DF600017BAE /* ContainerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,19 +396,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7E25BA1E21D107F900EB2EC7 /* TwitterSlideOutMenu.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7E25BA1F21D107F900EB2EC7 /* TwitterSlideOutMenu.xcdatamodel */,
-			);
-			currentVersion = 7E25BA1F21D107F900EB2EC7 /* TwitterSlideOutMenu.xcdatamodel */;
-			path = TwitterSlideOutMenu.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7E25BA0C21D107F900EB2EC7 /* Project object */;
 }
