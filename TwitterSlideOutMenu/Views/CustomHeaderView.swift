@@ -10,7 +10,7 @@ import UIKit
 class CustomMenuHeaderView: UIView {
     let nameLabel:UILabel  = {
         let label = UILabel()
-        label.text = "Brian Voong"
+        label.text = "Sherif Zekry"
         label.font = UIFont(name: "Avenir Next", size: 25)
         label.font = UIFont.boldSystemFont(ofSize: 25)
         return label
@@ -18,7 +18,7 @@ class CustomMenuHeaderView: UIView {
     
     let userNameLabel:UILabel = {
         let label = UILabel()
-        label.text = "@buildThatApp"
+        label.text = "SherifZekry93"
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = .gray
         return label

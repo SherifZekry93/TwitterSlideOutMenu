@@ -10,11 +10,11 @@ import UIKit
 extension MenuTableViewController
 {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let root = UIApplication.shared.keyWindow!.rootViewController as! BaseSlidingController
-        root.didSelectMenuItem(indexPath: indexPath)
+        delegate?.selectAnItem(indexPath: indexPath)
     }
 }
 class MenuTableViewController: UITableViewController {
+    var delegate: sideMenuDelegate?
     let menuItems:[MenuItem] = [
         MenuItem(icon: #imageLiteral(resourceName: "account"),title: "Profile"),
         MenuItem(icon:#imageLiteral(resourceName: "trending"),title:"Trending"),

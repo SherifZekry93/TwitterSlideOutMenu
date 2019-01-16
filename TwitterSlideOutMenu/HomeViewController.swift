@@ -9,7 +9,6 @@
 import UIKit
 
 class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -18,11 +17,11 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
     {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(handleOpenMenu))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(handleOpenMenu))
-
     }
     @objc func handleOpenMenu()
     {
-        
+        let baseController = (UIApplication.shared.delegate  as! AppDelegate).rootViewController()
+        baseController.openMenu()
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
@@ -31,7 +30,6 @@ class HomeViewController: UITableViewController,UIGestureRecognizerDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "handleToggleMenu")
         cell.textLabel?.text = "Row \(indexPath.row)"
-        //cell.imageView?.image = UIImage(named: "account")
         return cell
     }
     

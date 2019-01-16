@@ -17,6 +17,10 @@
 		7E657B6E21D38DA9007D46B9 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E657B6D21D38DA9007D46B9 /* MenuItemCell.swift */; };
 		7E657B7121D3A6B6007D46B9 /* TrendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E657B7021D3A6B6007D46B9 /* TrendingController.swift */; };
 		7E657B7321D3AC4B007D46B9 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E657B7221D3AC4B007D46B9 /* VideosTableViewController.swift */; };
+		7E67DD9E21D4B680003A4F09 /* ChatRoomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67DD9D21D4B680003A4F09 /* ChatRoomMenu.swift */; };
+		7E67DDA021D4CE3E003A4F09 /* ChatRoomMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67DD9F21D4CE3E003A4F09 /* ChatRoomMenuCell.swift */; };
+		7E67DDA221D4D1B4003A4F09 /* CustomHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67DDA121D4D1B4003A4F09 /* CustomHeaderLabel.swift */; };
+		7E67DDA421D4E23F003A4F09 /* ChatRoomMenuContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E67DDA321D4E23F003A4F09 /* ChatRoomMenuContainerController.swift */; };
 		7EFA460721D25DF600017BAE /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA460621D25DF600017BAE /* ContainerVC.swift */; };
 		7EFA460C21D2811000017BAE /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFA460B21D2811000017BAE /* CustomHeaderView.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +38,10 @@
 		7E657B6D21D38DA9007D46B9 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		7E657B7021D3A6B6007D46B9 /* TrendingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingController.swift; sourceTree = "<group>"; };
 		7E657B7221D3AC4B007D46B9 /* VideosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewController.swift; sourceTree = "<group>"; };
+		7E67DD9D21D4B680003A4F09 /* ChatRoomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomMenu.swift; sourceTree = "<group>"; };
+		7E67DD9F21D4CE3E003A4F09 /* ChatRoomMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomMenuCell.swift; sourceTree = "<group>"; };
+		7E67DDA121D4D1B4003A4F09 /* CustomHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderLabel.swift; sourceTree = "<group>"; };
+		7E67DDA321D4E23F003A4F09 /* ChatRoomMenuContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomMenuContainerController.swift; sourceTree = "<group>"; };
 		7EFA460621D25DF600017BAE /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		7EFA460B21D2811000017BAE /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +104,7 @@
 			children = (
 				7E657B7021D3A6B6007D46B9 /* TrendingController.swift */,
 				7E657B7221D3AC4B007D46B9 /* VideosTableViewController.swift */,
+				7E67DD9D21D4B680003A4F09 /* ChatRoomMenu.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,6 +122,9 @@
 			children = (
 				7EFA460B21D2811000017BAE /* CustomHeaderView.swift */,
 				7E657B6D21D38DA9007D46B9 /* MenuItemCell.swift */,
+				7E67DD9F21D4CE3E003A4F09 /* ChatRoomMenuCell.swift */,
+				7E67DDA121D4D1B4003A4F09 /* CustomHeaderLabel.swift */,
+				7E67DDA321D4E23F003A4F09 /* ChatRoomMenuContainerController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,13 +201,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E657B7121D3A6B6007D46B9 /* TrendingController.swift in Sources */,
+				7E67DDA421D4E23F003A4F09 /* ChatRoomMenuContainerController.swift in Sources */,
 				7EFA460C21D2811000017BAE /* CustomHeaderView.swift in Sources */,
 				7E25BA2D21D1218B00EB2EC7 /* MenuTableViewController.swift in Sources */,
+				7E67DD9E21D4B680003A4F09 /* ChatRoomMenu.swift in Sources */,
+				7E67DDA021D4CE3E003A4F09 /* ChatRoomMenuCell.swift in Sources */,
 				7E657B7321D3AC4B007D46B9 /* VideosTableViewController.swift in Sources */,
 				7E25BA1A21D107F900EB2EC7 /* HomeViewController.swift in Sources */,
 				7E657B6C21D38C30007D46B9 /* MenuItem.swift in Sources */,
 				7E657B6E21D38DA9007D46B9 /* MenuItemCell.swift in Sources */,
 				7E25BA1821D107F900EB2EC7 /* AppDelegate.swift in Sources */,
+				7E67DDA221D4D1B4003A4F09 /* CustomHeaderLabel.swift in Sources */,
 				7EFA460721D25DF600017BAE /* ContainerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,28 +7,28 @@
 //
 
 import UIKit
-class RightContainerView:UIView{}
-class LeftContainerView:UIView{}
-class DarkCoverView:UIView{}
-class BaseSlidingController: UIViewController {
+protocol sideMenuDelegate
+{
+    func selectAnItem(indexPath:IndexPath)
+}
+class BaseSlidingController: UIViewController,sideMenuDelegate {
     var redViewLeadingConstraint:NSLayoutConstraint!
     var redViewTrailingConstraint:NSLayoutConstraint!
     var menuWidth:CGFloat = 300
     var isMenuOpen:Bool = false
-    let redView:RightContainerView =  {
-        let v = RightContainerView()
+    let rightView:UIView =  {
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    let leftView:UIView = {
+        let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
     
-    let blueView:LeftContainerView = {
-        let v = LeftContainerView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        return v
-    }()
-    
-    lazy var darkCoverView : DarkCoverView = {
-        let v = DarkCoverView()
+    lazy var darkCoverView : UIView = {
+        let v = UIView()
         v.backgroundColor = .black
         v.alpha = 0
         v.backgroundColor = UIColor(white: 0, alpha: 0.8)
@@ -40,8 +40,8 @@ class BaseSlidingController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupViews()
+        view.backgroundColor = .white
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         view.addGestureRecognizer(panGesture)
     }
@@ -65,20 +65,20 @@ class BaseSlidingController: UIViewController {
         }
     }
     private func setupViews() {
-        view.addSubview(redView)
-        view.addSubview(blueView)
-        redViewLeadingConstraint =  redView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant:0);
+        view.addSubview(rightView)
+        view.addSubview(leftView)
+        redViewLeadingConstraint =  rightView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant:0);
         redViewTrailingConstraint =
-        redView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        rightView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         NSLayoutConstraint.activate([
-            redView.topAnchor.constraint(equalTo: view.topAnchor),
-            redView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            rightView.topAnchor.constraint(equalTo: view.topAnchor),
+            rightView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             redViewLeadingConstraint,
             redViewTrailingConstraint,
-            blueView.topAnchor.constraint(equalTo: view.topAnchor),
-            blueView.trailingAnchor.constraint(equalTo: redView.leadingAnchor),
-            blueView.widthAnchor.constraint(equalToConstant: menuWidth),
-            blueView.heightAnchor.constraint(equalTo: view.heightAnchor)
+            leftView.topAnchor.constraint(equalTo: view.topAnchor),
+            leftView.trailingAnchor.constraint(equalTo: rightView.leadingAnchor),
+            leftView.widthAnchor.constraint(equalToConstant: menuWidth),
+            leftView.heightAnchor.constraint(equalTo: view.heightAnchor)
             ])
         setupViewControllers()
     }
@@ -86,28 +86,29 @@ class BaseSlidingController: UIViewController {
     {
         let homeView = rightViewController.view!
         homeView.translatesAutoresizingMaskIntoConstraints = false
-        redView.addSubview(homeView)
+        rightView.addSubview(homeView)
         addChild(rightViewController)
-        redView.addSubview(darkCoverView)
+        rightView.addSubview(darkCoverView)
         NSLayoutConstraint.activate([
-            homeView.topAnchor.constraint(equalTo: redView.topAnchor),
-            homeView.bottomAnchor.constraint(equalTo: redView.bottomAnchor),
-            homeView.trailingAnchor.constraint(equalTo: redView.trailingAnchor),
-            homeView.leadingAnchor.constraint(equalTo: redView.leadingAnchor),
-            darkCoverView.topAnchor.constraint(equalTo: redView.topAnchor),
-            darkCoverView.bottomAnchor.constraint(equalTo: redView.bottomAnchor),
-            darkCoverView.trailingAnchor.constraint(equalTo: redView.trailingAnchor),
-            darkCoverView.leadingAnchor.constraint(equalTo: redView.leadingAnchor)
+            homeView.topAnchor.constraint(equalTo: rightView.topAnchor),
+            homeView.bottomAnchor.constraint(equalTo: rightView.bottomAnchor),
+            homeView.trailingAnchor.constraint(equalTo: rightView.trailingAnchor),
+            homeView.leadingAnchor.constraint(equalTo: rightView.leadingAnchor),
+            darkCoverView.topAnchor.constraint(equalTo: rightView.topAnchor),
+            darkCoverView.bottomAnchor.constraint(equalTo: rightView.bottomAnchor),
+            darkCoverView.trailingAnchor.constraint(equalTo: rightView.trailingAnchor),
+            darkCoverView.leadingAnchor.constraint(equalTo: rightView.leadingAnchor)
             ])
         let menu = MenuTableViewController()
+        menu.delegate = self
         let menuView = menu.view!
         menuView.translatesAutoresizingMaskIntoConstraints = false
-        blueView.addSubview(menuView)
+        leftView.addSubview(menuView)
         NSLayoutConstraint.activate([
-            menuView.topAnchor.constraint(equalTo: blueView.topAnchor),
-            menuView.bottomAnchor.constraint(equalTo: blueView.bottomAnchor),
-            menuView.trailingAnchor.constraint(equalTo: blueView.trailingAnchor),
-            menuView.leadingAnchor.constraint(equalTo: blueView.leadingAnchor),
+            menuView.topAnchor.constraint(equalTo: leftView.topAnchor),
+            menuView.bottomAnchor.constraint(equalTo: leftView.bottomAnchor),
+            menuView.trailingAnchor.constraint(equalTo: leftView.trailingAnchor),
+            menuView.leadingAnchor.constraint(equalTo: leftView.leadingAnchor),
             ])
         addChild(menu)
     }
@@ -156,6 +157,7 @@ class BaseSlidingController: UIViewController {
         redViewLeadingConstraint.constant = 0
         redViewTrailingConstraint.constant = 0
         animateView()
+        setNeedsStatusBarAppearanceUpdate()
     }
     func openMenu()
     {
@@ -164,6 +166,10 @@ class BaseSlidingController: UIViewController {
         redViewLeadingConstraint.constant = menuWidth
         redViewTrailingConstraint.constant = menuWidth
         animateView()
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return isMenuOpen ? .lightContent : .default
     }
     func animateView()
     {
@@ -173,8 +179,8 @@ class BaseSlidingController: UIViewController {
         }, completion: nil)
     }
     var rightViewController:UIViewController = UINavigationController(rootViewController: HomeViewController())
-    func  didSelectMenuItem(indexPath:IndexPath)
-    {
+    
+    func selectAnItem(indexPath: IndexPath) {
         performViewCleanUp()
         closeMenu()
         switch indexPath.row {
@@ -185,7 +191,7 @@ class BaseSlidingController: UIViewController {
         default:
             addSubController(toShowView: VideosTableViewController())
         }
-        redView.bringSubviewToFront(darkCoverView)
+        rightView.bringSubviewToFront(darkCoverView)
     }
     func performViewCleanUp()
     {
@@ -195,7 +201,7 @@ class BaseSlidingController: UIViewController {
     func addSubController(toShowView:UIViewController)
     {
         rightViewController = toShowView
-        redView.addSubview(rightViewController.view)
+        rightView.addSubview(rightViewController.view)
         addChild(rightViewController)
     }
     @objc func dismissUsingDarkCoverView()
